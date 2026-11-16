@@ -27,23 +27,18 @@ def main() -> None:
                 attrs.append({
                     "name": a["name"],
                     "mutable": False,
-                    # Một số phiên bản CVAT lỗi khi dán checkbox qua Raw.
-                    # Xuất can_review thành select no/yes; taxonomy nội bộ vẫn giữ checkbox.
-                    "input_type": "select" if a["type"] == "checkbox" else a["type"],
-                    "default_value": ("no" if a["type"] == "checkbox"
-                                      else str(a.get("default", ""))),
-                    "values": (["no", "yes"] if a["type"] == "checkbox"
-                               else [str(v) for v in a.get("values", [])]),
+                    "input_type": a["type"],
+                    "default_value": str(a.get("default", "")),
+                    "values": [str(v) for v in a.get("values", [])] if a["type"] == "select" else [],
                 })
-        labels.append({"name": name, "type": "rectangle",
-                       "color": "#808080" if name == tax.ignore else COLORS[i % len(COLORS)],
+        labels.append({"name": name, "color": "#808080" if name == tax.ignore else COLORS[i % len(COLORS)],
                        "attributes": attrs})
     text = json.dumps(labels, ensure_ascii=False, indent=2)
     out = ROOT / "cvat" / "labels_generated.json"
     out.parent.mkdir(exist_ok=True)
     out.write_text(text + "\n", encoding="utf8")
     print(text)
-    print(f"\n# Wrote {rel(out)} (taxonomy {tax.version}). Paste into CVAT: Project -> Labels -> Raw -> Done.")
+    print(f"\n# Đã ghi {rel(out)} (taxonomy {tax.version}). Dán nội dung vào CVAT: Project -> Labels -> Raw -> Done.")
 
 
 if __name__ == "__main__":
