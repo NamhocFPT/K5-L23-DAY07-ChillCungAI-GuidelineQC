@@ -17,7 +17,7 @@ from pathlib import Path
 
 from common import IMAGES_DIR, ROOT, Taxonomy, list_label_files, load_assignment, load_coco, load_taxonomy, rel
 
-NAME_RE = re.compile(r"^(\d+)_([A-Za-z0-9_\-]+)\.json$")
+NAME_RE = re.compile(r"^([A-Za-z0-9]+)_([A-Za-z0-9_\-]+)\.json$")
 
 
 def validate(path: Path, tax: Taxonomy, assignment) -> tuple:
@@ -83,8 +83,18 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("files", nargs="*", help="File nhãn cần kiểm")
     ap.add_argument("--all", action="store_true", help="Kiểm mọi file trong submission/labels/")
+    ap.add_argument("--taxonomy", default=None, help="Đường dẫn taxonomy JSON; mặc định submission/taxonomy.json")
     args = ap.parse_args()
-    tax = load_taxonomy()
+    if args.taxonomy:
+        taxonomy_path = Path(args.taxonomy)
+        if not taxonomy_path.is_absolute():
+            taxonomy_path = ROOT / taxonomy_path
+        try:
+            tax = Taxonomy(json.loads(taxonomy_path.read_text(encoding="utf8")))
+        except (OSError, json.JSONDecodeError, KeyError) as e:
+            ap.error(f"Không đọc được taxonomy {taxonomy_path}: {e}")
+    else:
+        tax = load_taxonomy()
     files = [Path(f) for f in args.files] or (list_label_files() if args.all else [])
     if not files:
         ap.error("Chưa chỉ định file. Dùng --all hoặc truyền đường dẫn file nhãn.")
