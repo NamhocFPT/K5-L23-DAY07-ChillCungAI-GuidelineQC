@@ -18,6 +18,9 @@ from common import IMAGES_DIR, QC_DIR, WORK_DIR, die, list_images, rel, write_cs
 
 
 def main() -> None:
+    # Tránh lỗi Unicode khi chạy trên Windows với code page mặc định.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--members", required=True, help="Danh sách MSHV, ngăn cách bằng dấu phẩy. VD: 123,456,789")
     ap.add_argument("--overlap", type=int, default=None,
