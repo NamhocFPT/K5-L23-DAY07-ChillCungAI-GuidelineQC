@@ -1,38 +1,66 @@
-# Ghi chú cá nhân — 2A202603116 - Nguyễn Quang Thực
+# Guideline gán nhãn — v1.0 (bản cá nhân) — 2A202603116 - Nguyễn Quang Thực
 
-## 1. Pha 1: ba ca khó tôi tìm ra trong 40 ảnh
+> Bản cá nhân của Nguyễn Quang Thực, được viết từ `guideline_v0_starter.md`.
+> Các quyết định bổ sung cần được đối chiếu với guideline thống nhất của nhóm.
 
-| Ảnh | v0 không trả lời được gì | Quyết định ban đầu của tôi |
+- Phiên bản: v1.0 (bản cá nhân)
+- Ngày: 2026-11-16
+- Người viết: 2A202603116 - Nguyễn Quang Thực
+- Loại nhãn: bounding box (hộp chữ nhật) trên ảnh đường phố
+- Công cụ: CVAT, xuất COCO 1.0
+
+---
+
+## 1. Mục tiêu
+
+Nhãn dùng để huấn luyện mô hình phát hiện **người đi bộ và phương tiện** trên ảnh đường phố
+(ví dụ cho camera giao thông hoặc xe tự lái).
+
+## 2. Lớp và thuộc tính
+
+### Lớp (mỗi vật thuộc đúng một lớp)
+
+| Lớp | Định nghĩa |
+|---|---|
+| `car` | Ô tô con. |
+| `truck` | Xe tải, pickup hoặc xe có cabin và thùng hàng riêng. |
+| `van` | Xe thùng kín cỡ nhỏ. |
+| `motorcycle` | Xe máy, xe tay ga hoặc mô tô hai bánh có động cơ. |
+| `bicycle` | Xe đạp hai bánh không có động cơ. |
+| `tuktuk` | Xe ba bánh khung liền, gồm tuk-tuk và auto-rickshaw. |
+| `person` | Người thật đang đi bộ hoặc đứng trên đường. Người đang ngồi/lái trên xe không gán `person`. |
+| `ignore_region` | Vùng không cần gán từng vật. |
+
+### Thuộc tính
+
+| Thuộc tính | Giá trị | Ý nghĩa |
 |---|---|---|
-| img_0__ | Bổ sung ảnh và tình huống thực tế sau khi tự xem đủ 40 ảnh. | Chưa chốt |
-| img_0__ | Bổ sung ảnh và tình huống thực tế sau khi tự xem đủ 40 ảnh. | Chưa chốt |
-| img_0__ | Bổ sung ảnh và tình huống thực tế sau khi tự xem đủ 40 ảnh. | Chưa chốt |
+| `occluded_level` | `0`, `1`, `2`, `3` | Mức bị che: 0 là thấy rõ, 1 là bị che ít, 2 là bị che nhiều, 3 là không rõ nhưng vẫn nhận ra được. |
+| `truncated` | `no`, `yes` | Vật bị cắt ở mép ảnh. |
+| `can_review` | tick / không | Tick khi bạn không chắc, để người khác xem lại. |
 
-## 2. Pha 2: chỗ tôi bất đồng với nhóm
+## 3. Quy tắc vẽ box
 
-- Quyết định thống nhất quan trọng: `person` chỉ dùng cho người đi bộ; người ngồi hoặc lái trên xe không gán `person`.
-- Các bất đồng khác và lý do nhóm chốt: bổ sung sau buổi họp nhóm.
+1. Gán box cho mọi người đi bộ và phương tiện thật trong ảnh.
+2. Box ôm sát phần nhìn thấy của vật.
+3. Chọn đúng lớp và thuộc tính.
+4. Người đi bộ gán `person` riêng; người đang ngồi hoặc lái trên xe không gán `person`.
+5. Tuk-tuk và auto-rickshaw gán lớp `tuktuk`, không gộp vào `motorcycle` hoặc `truck`.
+6. Vật quá nhỏ hoặc cụm vật không thể tách riêng có thể gán `ignore_region`.
+7. Tượng, ma-nơ-canh, đồ chơi, hình in và phản chiếu không gán box.
 
-## 3. Pha 3: ảnh tôi đã gán
+## 4. Ca khó
 
-- Số ảnh được giao: **24**.
-- Số box đã vẽ: bổ sung sau khi hoàn thành gán nhãn.
-- Số lần tôi chọn `can_review = yes`: bổ sung sau khi hoàn thành gán nhãn.
-- Ca tôi lưỡng lự nhất khi gán: bổ sung sau khi xem và gán các ảnh được phân công.
+| Ca khó | Cách xử lý |
+|---|---|
+| Tuk-tuk/auto-rickshaw nhìn thấy rõ | Gán một box `tuktuk`. |
+| Người lái hoặc ngồi trong tuk-tuk | Chỉ gán `tuktuk`; không gán `person` cho người đó. |
+| Người đi bộ cạnh phương tiện | Gán thêm một box `person` riêng. |
+| Không chắc lớp hoặc vật thật | Gán theo nhận định tốt nhất và tick `can_review`. |
+| Cụm người/phương tiện quá dày | Dùng `ignore_region` nếu không thể tách từng vật. |
 
-## 4. Pha 4–5: tôi lệch ở đâu
+## 5. QC và phiên bản
 
-- Các ca có tên tôi trong `calibration_candidates.csv`: bổ sung sau khi chạy IAA.
-- Phân loại nguyên nhân: guideline mơ hồ hay chưa nắm quy tắc — bổ sung sau calibration.
-- Quyết định calibration quan trọng nhất: bổ sung sau buổi calibration.
-
-## 5. Dùng AI
-
-- Dùng AI để đọc và tóm tắt quy trình bài, kiểm tra cấu trúc file, hỗ trợ sửa lỗi script/định dạng CVAT và kiểm tra tính hợp lệ của JSON.
-- Không dùng AI hoặc mô hình để xem ảnh và tự động gán box thay cho người gán nhãn.
-- Các nhãn cuối cùng phải do thành viên tự quan sát ảnh và thực hiện trên CVAT.
-
-## 6. Bài học
-
-- Cần chốt định nghĩa lớp và ngưỡng thuộc tính bằng ví dụ cụ thể trước khi bắt đầu gán nhãn.
-- Cần giữ nguyên guideline sau khi thống nhất trong Pha 2; các ca chưa chắc phải đánh dấu để calibration thay vì tự đổi quy tắc.
+- Mọi thay đổi làm đổi nhãn đều tăng phiên bản guideline.
+- Ca mơ hồ: tick `can_review`.
+- Các lớp và quy tắc trong bản cá nhân phải được đối chiếu với guideline thống nhất của nhóm trước khi gán chính thức.
