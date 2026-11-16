@@ -17,14 +17,15 @@ from pathlib import Path
 
 from common import IMAGES_DIR, ROOT, Taxonomy, list_label_files, load_assignment, load_coco, load_taxonomy, rel
 
-NAME_RE = re.compile(r"^(\d+)_([A-Za-z0-9_\-]+)\.json$")
+# MSHV có thể có chữ (VD K5: 2A202603158), nên nhận chữ và số, không chứa "_".
+NAME_RE = re.compile(r"^([0-9A-Za-z]+)_([A-Za-z0-9_\-]+)\.json$")
 
 
 def validate(path: Path, tax: Taxonomy, assignment) -> tuple:
     errs, warns = [], []
     m = NAME_RE.match(path.name)
     if not m:
-        errs.append("Tên file phải dạng <MSHV>_<HoTen>.json, MSHV là số, HoTen viết liền không dấu "
+        errs.append("Tên file phải dạng <MSHV>_<HoTen>.json, MSHV gồm chữ/số, HoTen viết liền không dấu "
                     "(VD: 20001_NguyenVanA.json). Hãy đổi tên file.")
     try:
         lf = load_coco(path, tax)
