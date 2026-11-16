@@ -29,16 +29,17 @@ def main() -> None:
                     "mutable": False,
                     "input_type": a["type"],
                     "default_value": str(a.get("default", "")),
-                    "values": [str(v) for v in a.get("values", [])] if a["type"] == "select" else [],
+                    "values": [str(v) for v in a.get("values", [])],
                 })
-        labels.append({"name": name, "color": "#808080" if name == tax.ignore else COLORS[i % len(COLORS)],
+        labels.append({"name": name, "type": "rectangle",
+                       "color": "#808080" if name == tax.ignore else COLORS[i % len(COLORS)],
                        "attributes": attrs})
     text = json.dumps(labels, ensure_ascii=False, indent=2)
     out = ROOT / "cvat" / "labels_generated.json"
     out.parent.mkdir(exist_ok=True)
     out.write_text(text + "\n", encoding="utf8")
     print(text)
-    print(f"\n# Đã ghi {rel(out)} (taxonomy {tax.version}). Dán nội dung vào CVAT: Project -> Labels -> Raw -> Done.")
+    print(f"\n# Wrote {rel(out)} (taxonomy {tax.version}). Paste into CVAT: Project -> Labels -> Raw -> Done.")
 
 
 if __name__ == "__main__":
