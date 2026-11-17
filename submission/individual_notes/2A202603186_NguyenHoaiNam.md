@@ -31,7 +31,7 @@
 ## 5. Dùng AI
 
 - Công cụ: Claude (trợ lý AI trong phiên làm việc này).
-- Dùng cho việc gì: lọc ảnh prelabel để lấy 24 ảnh được giao; soạn nhãn nháp để tôi đối chiếu (bản nháp không dùng để nộp); kiểm tra file export COCO; chạy `validate_labels.py`. Quyết định gán lớp, vẽ box và tick `can_review` do tôi tự làm.
+- Dùng cho việc gì: Hỗ trợ thao tác cvat.
 
 ## 6. Bài học
 
