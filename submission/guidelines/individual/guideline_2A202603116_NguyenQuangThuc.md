@@ -1,11 +1,11 @@
-# Guideline gán nhãn — v1.0 (bản cá nhân) — 2A202603116 - Nguyễn Quang Thực
+# Guideline gán nhãn — v1.0 (bản cá nhân) — 2A202603116 - Nguyễn Quang Thức
 
-> Bản cá nhân của Nguyễn Quang Thực, được viết từ `guideline_v0_starter.md`.
+> Bản cá nhân của Nguyễn Quang Thức, được viết từ `guideline_v0_starter.md`.
 > Các quyết định bổ sung cần được đối chiếu với guideline thống nhất của nhóm.
 
 - Phiên bản: v1.0 (bản cá nhân)
 - Ngày: 2026-11-16
-- Người viết: 2A202603116 - Nguyễn Quang Thực
+- Người viết: 2A202603116 - Nguyễn Quang Thức
 - Loại nhãn: bounding box (hộp chữ nhật) trên ảnh đường phố
 - Công cụ: CVAT, xuất COCO 1.0
 

@@ -1,4 +1,4 @@
-# Ghi chú cá nhân — 2A202603116 - Nguyễn Quang Thực
+# Ghi chú cá nhân — 2A202603116 - Nguyễn Quang Thức
 
 ## 1. Pha 1: ba ca khó tôi tìm ra trong 40 ảnh
 

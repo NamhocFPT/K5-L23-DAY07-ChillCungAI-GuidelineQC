@@ -1,4 +1,4 @@
-# Day 07 Lab — Nhóm ChillCungAI: 2A202603186 - Nguyễn Hoài Nam, 2A202603116 - Nguyễn Quang Thực, 2A202603327 - Đinh Đức Hiếu, 2A202603158 - Nguyễn Quốc Thắng, 2A202603255 - Doãn Thị Phương Thảo
+# Day 07 Lab — Nhóm ChillCungAI: 2A202603186 - Nguyễn Hoài Nam, 2A202603116 - Nguyễn Quang Thức, 2A202603327 - Đinh Đức Hiếu, 2A202603158 - Nguyễn Quốc Thắng, 2A202603255 - Doãn Thị Phương Thảo
 
 **Nhóm 2–5 người · 4 giờ · 40 ảnh đường phố châu Á · gán box bằng CVAT**
 
