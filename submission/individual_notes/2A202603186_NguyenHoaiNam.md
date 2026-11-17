@@ -10,7 +10,7 @@
 
 ## 2. Pha 2: chỗ tôi bất đồng với nhóm
 
-- Người ngồi/lái xe máy: bản của tôi gán `person` cho từng người (quy tắc 2). Bản Thức và Thảo không gán. Bản Hiếu và Thắng gán khi người ngồi trên xe hở. Nhóm chốt (v2.0): không gán `person` cho người ngồi/lái xe. Tôi đồng ý: sau khi làm theo v2.0, số box `person` trong file nhãn giảm từ 59 xuống 41, và quy tắc này giữ `person` cho người đi bộ hoặc đứng trên đường, đúng mục tiêu của nhóm.
+- Người ngồi/lái xe máy: bản của tôi gán `person` cho từng người (quy tắc 2). Bản Thức và Thảo không gán. Bản Hiếu và Thắng gán khi người ngồi trên xe hở. Nhóm chốt (v2.0): không gán `person` cho người ngồi/lái xe. Tôi đồng ý: theo v2.0, file nhãn 24 ảnh của tôi có 41 box `person`, chỉ gồm người đi bộ hoặc đứng trên đường, đúng mục tiêu của nhóm.
 - Tuk-tuk, xe buýt, xe đạp: bản của tôi không có lớp, chỉ tick `can_review`. Bản Thức và Thắng có lớp riêng; bản Hiếu để `ignore_region`. Nhóm chốt (v2.0): có lớp `tuktuk`, `bus`, `bicycle`. Tôi đồng ý: ba loại xe này có hình dạng và cách di chuyển khác ô tô và xe máy, nên tách lớp giúp mô hình học tốt hơn, và file nhãn hiện dùng đúng 9 lớp của v2.0.
 - Ngưỡng `occluded_level`: bản của tôi 10/40/70%, bản Hiếu 10/40/80%. Guideline v2.0 chưa ghi số cụ thể. Tôi chưa kết luận được, vì calibration chưa chạy nên chưa có dữ liệu để so hai ngưỡng. Đề nghị đưa vào Pha 2 để nhóm chốt.
 - Xe trang trí (img_019): bản của tôi để không gán. Bản Hiếu và Thắng gán `car`. Chưa chốt, đưa vào Pha 2 để nhóm quyết.
@@ -18,7 +18,7 @@
 ## 3. Pha 3: ảnh tôi đã gán
 
 - Số ảnh được giao: 24 (theo `submission/qc/assignments/2A202603186.txt`). Số box đã vẽ: 142 (export COCO 1.0 ngày 16/11, 17:18). Số lần tôi tick `can_review`: 69 box.
-- Ca nào tôi lưỡng lự nhất khi gán (ảnh, vì sao)?
+- Ca tôi lưỡng lự nhất khi gán (ảnh, vì sao):
   - Lưỡng lự nhất: có nên gán tuk-tuk là `car` không. Tôi phân vân vì tuk-tuk có bánh và chở người như xe con, nhưng khung ba bánh khác hẳn ô tô.
   - Guideline v2.0 chốt tuk-tuk là lớp `tuktuk` riêng, không gộp vào `car`.
 
@@ -31,7 +31,7 @@
 ## 5. Dùng AI
 
 - Công cụ: Claude (trợ lý AI trong phiên làm việc này).
-- Dùng cho việc gì: Hỗ trợ thao tác cvat
+- Dùng cho việc gì: lọc ảnh prelabel để lấy 24 ảnh được giao; soạn nhãn nháp để tôi đối chiếu (bản nháp không dùng để nộp); kiểm tra file export COCO; chạy `validate_labels.py`. Quyết định gán lớp, vẽ box và tick `can_review` do tôi tự làm.
 
 ## 6. Bài học
 
