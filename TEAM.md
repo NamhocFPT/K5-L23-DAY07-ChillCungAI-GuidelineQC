@@ -1,6 +1,6 @@
 # Thông tin nhóm
 
-- Tên nhóm: (chưa bổ sung)
+- Tên nhóm: ChillCungAI
 - Repo bài nộp (URL): https://github.com/NamhocFPT/K5-L23-DAY07-ChillCungAI-GuidelineQC
 - Commit chốt bài (hash): ddec8a5
 - Số thành viên: 5  → số người gán mỗi ảnh (K): 3
