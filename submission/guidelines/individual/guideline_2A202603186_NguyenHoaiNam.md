@@ -1,9 +1,9 @@
-# Guideline gán nhãn — v0.1 (cá nhân) — 2A202603186 - Nguyễn Hoài Nam | Nhóm: (chưa điền)
+# Guideline gán nhãn — v0.1 (cá nhân) — 2A202603186 - Nguyễn Hoài Nam | Nhóm: ChillCungAi
 
 > Bản cá nhân, viết từ `guideline_v0_starter.md` sau khi xem đủ 40 ảnh trong `data/images/`.
 > Các mục đánh dấu **Chưa chốt** cần thảo luận trong nhóm ở Pha 2.
 
-- Phiên bản: v0.1 (cá nhân)
+- Phiên bản: v0.1
 - Ngày: 2026-11-16
 - Người viết / duyệt: Nguyễn Hoài Nam
 
@@ -18,7 +18,7 @@ Sai thứ hai là **gán nhầm tượng, ma-nơ-canh, đồ chơi, hình in, ph
 ### Lớp
 
 | Lớp | Định nghĩa | Ví dụ | Phản ví dụ / dễ nhầm với |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `car` | Ô tô con, sedan, SUV, taxi, station wagon, có bánh xe thật | sedan đen (023), taxi xanh (040) | pickup (→ `truck`); xe đồ chơi, mô hình (038) |
 | `truck` | Xe có thùng hở, thùng bạt, thùng kín lớn, pickup, xe chở xe | xe chở xe (002), Isuzu thùng kín (007), pickup chở hàng (012) | bán tải làm mộ (027); tượng ngựa trên thùng xe (028) |
 | `van` | Xe thùng kín cỡ nhỏ, minivan chở khách | minivan bạc (003, 005) | xe tải nhỏ thùng bạt (036 → `truck`) |
@@ -27,6 +27,7 @@ Sai thứ hai là **gán nhầm tượng, ma-nơ-canh, đồ chơi, hình in, ph
 | `ignore_region` | Vùng đông vật cùng lớp mà không tách được từng vật | cụm xe máy đậu (030), đám người xem (019) | vật riêng lẻ nhìn được thì gán box thường |
 
 **Vật không thuộc lớp nào (không gán box, không ignore):**
+
 - Xe không có lớp trong v0: xe buýt, xe đạp, xe ba bánh (tuk-tuk, auto-rickshaw), xích lô, xe đẩy tay. Không gán box, tick `can_review`. Người trên các xe này vẫn gán `person`.
 - Vật không thật: tượng, mô hình, đồ chơi, xe trang trí, tượng đặt trên xe (011, 017, 027, 028, 038).
 - Hình in, billboard, tranh tường, phản chiếu trong gương (018, 020, 026).
@@ -36,7 +37,7 @@ Sai thứ hai là **gán nhầm tượng, ma-nơ-canh, đồ chơi, hình in, ph
 ### Thuộc tính
 
 | Thuộc tính | Giá trị | Ý nghĩa và ngưỡng |
-|---|---|---|
+| --- | --- | --- |
 | `occluded_level` | `0`, `1`, `2`, `3` | `0`: bị che dưới 10%. `1`: che 10–40%. `2`: che 40–70%. `3`: che trên 70% nhưng vẫn nhận ra lớp. Che trên 70% mà không nhận ra lớp thì không gán box. |
 | `truncated` | `no`, `yes` | `yes` khi vật chạm mép ảnh và có phần nằm ngoài ảnh (cạnh box cách mép ảnh dưới 2 px). Box vẽ theo phần nhìn thấy. |
 | `can_review` | tick / không | Tick khi: lớp không chắc; mức che nằm sát ngưỡng 10%, 40% hoặc 70%; vật cao dưới 20 px; ảnh mờ hoặc chuyển động; thuộc mục **Chưa chốt**. |
@@ -60,7 +61,7 @@ Sai thứ hai là **gán nhầm tượng, ma-nơ-canh, đồ chơi, hình in, ph
 Ghi theo 40 ảnh. Ảnh không có trong bảng chỉ có các lớp rõ ràng (`car`, `motorcycle`, `person`), gán theo mục 2 và 3.
 
 | Ảnh | Tình huống | Quyết định | Lý do |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | img_001 | Pickup cũ chở đồ; người ngồi bàn trước xe | Pickup → `truck`; người → `person` (occluded 1–2) | Quy tắc 11 |
 | img_002 | Xe chở xe nhiều xe con | Cabin và thùng → `truck`; xe trên thùng → `car` (occluded 1–2) | Quy tắc 4 |
 | img_003 | Minivan bạc phía sau; xe máy đông; người gánh đồ | `van` (occluded 1); xe máy và người gán (occluded 1–2); gánh không gán | Minivan là `van` |
@@ -103,6 +104,7 @@ Ghi theo 40 ảnh. Ảnh không có trong bảng chỉ có các lớp rõ ràng 
 | img_040 | Taxi xanh; người đội mũ đen che taxi; tuk-tuk; xe buýt vàng | Taxi → `car` (occluded 1); người → `person` (occluded 1); tuk-tuk và xe buýt không gán, tick `can_review` | Chưa chốt A và B |
 
 **Chưa chốt (cần thảo luận trong nhóm):**
+
 - **A.** Tuk-tuk, auto-rickshaw và xích lô: thêm lớp mới (ví dụ `tuktuk`) hay gộp vào `car`/`motorcycle`? (004, 016, 023, 035, 040)
 - **B.** Xe buýt và xe khách nhỏ: thêm lớp `bus` hay gán `truck`? (009, 031, 037, 040)
 - **C.** Xe đạp và xe đạp kéo: có cần lớp `bicycle` không? (003, 006, 023, 029, 039)
