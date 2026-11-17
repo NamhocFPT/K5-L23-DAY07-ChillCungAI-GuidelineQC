@@ -24,7 +24,7 @@
 
 ## 4. Pha 4–5: tôi lệch ở đâu
 
-- Trong `calibration_candidates.csv`, các ca có tên tôi: [điền sau khi nhóm chạy `prepare_calibration.py`; hiện file chưa có].
+- Calibration chưa chạy: nhóm mới có 2/5 file nhãn, nên chưa có `calibration_candidates.csv`. Tôi chưa biết ca nào của mình bị đánh dấu lệch. Sẽ cập nhật sau khi nhóm chạy `prepare_calibration.py`.
 - Lệch đã thấy khi so nhãn với guideline v2.0 (chưa phải kết quả calibration): tôi gán `person` cho người ngồi trên xe máy, trong khi v2.0 không gán. Lý do: bản v0.1 của tôi tự viết quy tắc này trước khi nhóm chốt, nên tôi làm theo bản cá nhân chứ không theo quy tắc chung. Đây là lỗi nắm quy tắc, không phải guideline mơ hồ.
 - Tuk-tuk: tôi phân vân giữa `car` và lớp riêng. Guideline v2.0 chốt lớp `tuktuk`, nên đây là ca cần sửa theo nhóm.
 
