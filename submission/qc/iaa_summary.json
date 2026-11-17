@@ -1,0 +1,209 @@
+{
+  "taxonomy_version": "v2.0",
+  "thresholds": {
+    "iaa_iou": 0.85,
+    "iaa_class": 0.95,
+    "match_iou": 0.5
+  },
+  "n_annotators": 5,
+  "n_images_compared": 40,
+  "images_with_lt2_annotators": [],
+  "overall": {
+    "n_images": 120,
+    "n_matched_pairs": 474,
+    "n_unmatched_a": 189,
+    "n_unmatched_b": 253,
+    "n_skipped_in_ignore": 152,
+    "mean_iou": 0.8633289211528921,
+    "class_agreement": 0.8881856540084389,
+    "attr_agreement": {
+      "occluded_level": 0.6603375527426161,
+      "truncated": 0.8502109704641351
+    },
+    "n_below_iou_thr": 138,
+    "iou_pass": true,
+    "class_pass": false,
+    "pass": false
+  },
+  "per_pair": {
+    "2A202603116|2A202603158": {
+      "n_images": 13,
+      "n_matched_pairs": 45,
+      "n_unmatched_a": 30,
+      "n_unmatched_b": 40,
+      "n_skipped_in_ignore": 17,
+      "mean_iou": 0.8280128708245637,
+      "class_agreement": 0.6888888888888889,
+      "attr_agreement": {
+        "occluded_level": 0.4888888888888889,
+        "truncated": 0.8222222222222222
+      },
+      "n_below_iou_thr": 20,
+      "iou_pass": false,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603116|2A202603186": {
+      "n_images": 12,
+      "n_matched_pairs": 39,
+      "n_unmatched_a": 32,
+      "n_unmatched_b": 39,
+      "n_skipped_in_ignore": 19,
+      "mean_iou": 0.796832499334045,
+      "class_agreement": 0.9487179487179487,
+      "attr_agreement": {
+        "occluded_level": 0.41025641025641024,
+        "truncated": 0.8717948717948718
+      },
+      "n_below_iou_thr": 19,
+      "iou_pass": false,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603116|2A202603255": {
+      "n_images": 12,
+      "n_matched_pairs": 58,
+      "n_unmatched_a": 16,
+      "n_unmatched_b": 29,
+      "n_skipped_in_ignore": 14,
+      "mean_iou": 0.8762402290785003,
+      "class_agreement": 0.9310344827586207,
+      "attr_agreement": {
+        "occluded_level": 0.5517241379310345,
+        "truncated": 0.8793103448275862
+      },
+      "n_below_iou_thr": 11,
+      "iou_pass": true,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603116|2A202603327": {
+      "n_images": 11,
+      "n_matched_pairs": 30,
+      "n_unmatched_a": 11,
+      "n_unmatched_b": 35,
+      "n_skipped_in_ignore": 9,
+      "mean_iou": 0.8952706196601606,
+      "class_agreement": 0.9333333333333333,
+      "attr_agreement": {
+        "occluded_level": 0.7333333333333333,
+        "truncated": 0.9
+      },
+      "n_below_iou_thr": 7,
+      "iou_pass": true,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603158|2A202603186": {
+      "n_images": 13,
+      "n_matched_pairs": 65,
+      "n_unmatched_a": 48,
+      "n_unmatched_b": 15,
+      "n_skipped_in_ignore": 0,
+      "mean_iou": 0.8993075673248718,
+      "class_agreement": 0.9384615384615385,
+      "attr_agreement": {
+        "occluded_level": 1.0,
+        "truncated": 0.8307692307692308
+      },
+      "n_below_iou_thr": 14,
+      "iou_pass": true,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603158|2A202603255": {
+      "n_images": 11,
+      "n_matched_pairs": 59,
+      "n_unmatched_a": 17,
+      "n_unmatched_b": 27,
+      "n_skipped_in_ignore": 0,
+      "mean_iou": 0.8699287542153552,
+      "class_agreement": 0.847457627118644,
+      "attr_agreement": {
+        "occluded_level": 0.864406779661017,
+        "truncated": 0.9152542372881356
+      },
+      "n_below_iou_thr": 18,
+      "iou_pass": true,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603158|2A202603327": {
+      "n_images": 11,
+      "n_matched_pairs": 37,
+      "n_unmatched_a": 12,
+      "n_unmatched_b": 8,
+      "n_skipped_in_ignore": 16,
+      "mean_iou": 0.8729211955594202,
+      "class_agreement": 0.8378378378378378,
+      "attr_agreement": {
+        "occluded_level": 0.5675675675675675,
+        "truncated": 0.8108108108108109
+      },
+      "n_below_iou_thr": 9,
+      "iou_pass": true,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603186|2A202603255": {
+      "n_images": 11,
+      "n_matched_pairs": 39,
+      "n_unmatched_a": 14,
+      "n_unmatched_b": 22,
+      "n_skipped_in_ignore": 23,
+      "mean_iou": 0.8168760340296968,
+      "class_agreement": 0.9230769230769231,
+      "attr_agreement": {
+        "occluded_level": 0.8205128205128205,
+        "truncated": 0.7692307692307693
+      },
+      "n_below_iou_thr": 19,
+      "iou_pass": false,
+      "class_pass": false,
+      "pass": false
+    },
+    "2A202603186|2A202603327": {
+      "n_images": 12,
+      "n_matched_pairs": 47,
+      "n_unmatched_a": 5,
+      "n_unmatched_b": 15,
+      "n_skipped_in_ignore": 10,
+      "mean_iou": 0.8693989944901914,
+      "class_agreement": 0.9787234042553191,
+      "attr_agreement": {
+        "occluded_level": 0.40425531914893614,
+        "truncated": 0.8085106382978723
+      },
+      "n_below_iou_thr": 10,
+      "iou_pass": true,
+      "class_pass": true,
+      "pass": true
+    },
+    "2A202603255|2A202603327": {
+      "n_images": 14,
+      "n_matched_pairs": 55,
+      "n_unmatched_a": 4,
+      "n_unmatched_b": 23,
+      "n_skipped_in_ignore": 44,
+      "mean_iou": 0.8800367165502125,
+      "class_agreement": 0.8545454545454545,
+      "attr_agreement": {
+        "occluded_level": 0.6,
+        "truncated": 0.8727272727272727
+      },
+      "n_below_iou_thr": 11,
+      "iou_pass": true,
+      "class_pass": false,
+      "pass": false
+    }
+  },
+  "n_issues": 942,
+  "issues_by_type": {
+    "bo_sot_thua": 442,
+    "iou_thap": 138,
+    "sai_thuoc_tinh": 209,
+    "co_can_review": 100,
+    "sai_lop": 53
+  },
+  "n_flagged_images": 38
+}
