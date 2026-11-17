@@ -2,7 +2,7 @@
 
 - Tên nhóm: (chưa bổ sung)
 - Repo bài nộp (URL): https://github.com/NamhocFPT/K5-L23-DAY07-ChillCungAI-GuidelineQC
-- Commit chốt bài (hash):
+- Commit chốt bài (hash): 9d78015
 - Số thành viên: 5  → số người gán mỗi ảnh (K): 3
 
 | STT | MSHV | Họ và tên | Lớp (L2 / L3 / khác) | Tài khoản GitHub |
