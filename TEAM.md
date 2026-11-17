@@ -27,7 +27,7 @@ Danh sách trên phải khớp dòng tiêu đề của `README.md` (đã đổi 
 ## Kết quả tóm tắt (điền cuối bài)
 
 - Số thành viên / số lần gán mỗi ảnh (K): 5 / 3
-- IAA trước calibration: IoU trung bình **0.863**, đồng thuận lớp **88.8%** (mẫu số: **474 cặp box ghép được**; ngưỡng lần lượt 0.85 và 95%).
-- Số ảnh phải calibration: **38 / 40**.
+- IAA trước calibration: IoU trung bình **0.874**, đồng thuận lớp **94.7%** (mẫu số: **452 cặp box ghép được**; ngưỡng lần lượt 0.85 và 95%).
+- Số ảnh phải calibration: **37 / 40**.
 - Tỉ lệ lỗi sau calibration: **chưa thực hiện** theo ảnh và theo đối tượng (chưa có mẫu QC sau calibration).
-- **Quyết định:** **Rework** — IAA đồng thuận lớp mới đạt 88.8%, thấp hơn ngưỡng 95%; cần calibration và QC lại trước khi Release.
+- **Quyết định:** **Rework** — IAA đồng thuận lớp mới đạt 94.7%, thấp hơn ngưỡng 95%; cần calibration và QC lại trước khi Release.

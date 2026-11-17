@@ -10,17 +10,17 @@
   "images_with_lt2_annotators": [],
   "overall": {
     "n_images": 120,
-    "n_matched_pairs": 474,
-    "n_unmatched_a": 189,
-    "n_unmatched_b": 253,
-    "n_skipped_in_ignore": 152,
-    "mean_iou": 0.8633289211528921,
-    "class_agreement": 0.8881856540084389,
+    "n_matched_pairs": 452,
+    "n_unmatched_a": 192,
+    "n_unmatched_b": 172,
+    "n_skipped_in_ignore": 86,
+    "mean_iou": 0.8735917629544067,
+    "class_agreement": 0.9469026548672567,
     "attr_agreement": {
-      "occluded_level": 0.6603375527426161,
-      "truncated": 0.8502109704641351
+      "occluded_level": 0.6880530973451328,
+      "truncated": 0.8694690265486725
     },
-    "n_below_iou_thr": 138,
+    "n_below_iou_thr": 113,
     "iou_pass": true,
     "class_pass": false,
     "pass": false
@@ -28,19 +28,19 @@
   "per_pair": {
     "2A202603116|2A202603158": {
       "n_images": 13,
-      "n_matched_pairs": 45,
-      "n_unmatched_a": 30,
-      "n_unmatched_b": 40,
-      "n_skipped_in_ignore": 17,
-      "mean_iou": 0.8280128708245637,
-      "class_agreement": 0.6888888888888889,
+      "n_matched_pairs": 40,
+      "n_unmatched_a": 35,
+      "n_unmatched_b": 27,
+      "n_skipped_in_ignore": 13,
+      "mean_iou": 0.8304858991148922,
+      "class_agreement": 0.95,
       "attr_agreement": {
-        "occluded_level": 0.4888888888888889,
-        "truncated": 0.8222222222222222
+        "occluded_level": 0.55,
+        "truncated": 0.85
       },
-      "n_below_iou_thr": 20,
+      "n_below_iou_thr": 15,
       "iou_pass": false,
-      "class_pass": false,
+      "class_pass": true,
       "pass": false
     },
     "2A202603116|2A202603186": {
@@ -62,148 +62,148 @@
     },
     "2A202603116|2A202603255": {
       "n_images": 12,
-      "n_matched_pairs": 58,
-      "n_unmatched_a": 16,
-      "n_unmatched_b": 29,
-      "n_skipped_in_ignore": 14,
-      "mean_iou": 0.8762402290785003,
-      "class_agreement": 0.9310344827586207,
+      "n_matched_pairs": 59,
+      "n_unmatched_a": 15,
+      "n_unmatched_b": 23,
+      "n_skipped_in_ignore": 9,
+      "mean_iou": 0.8778386551283205,
+      "class_agreement": 0.9830508474576272,
       "attr_agreement": {
-        "occluded_level": 0.5517241379310345,
-        "truncated": 0.8793103448275862
+        "occluded_level": 0.559322033898305,
+        "truncated": 0.8813559322033898
       },
       "n_below_iou_thr": 11,
       "iou_pass": true,
-      "class_pass": false,
-      "pass": false
+      "class_pass": true,
+      "pass": true
     },
     "2A202603116|2A202603327": {
       "n_images": 11,
-      "n_matched_pairs": 30,
-      "n_unmatched_a": 11,
-      "n_unmatched_b": 35,
-      "n_skipped_in_ignore": 9,
-      "mean_iou": 0.8952706196601606,
-      "class_agreement": 0.9333333333333333,
+      "n_matched_pairs": 32,
+      "n_unmatched_a": 10,
+      "n_unmatched_b": 25,
+      "n_skipped_in_ignore": 7,
+      "mean_iou": 0.9202863627035109,
+      "class_agreement": 0.90625,
       "attr_agreement": {
-        "occluded_level": 0.7333333333333333,
-        "truncated": 0.9
+        "occluded_level": 0.71875,
+        "truncated": 0.90625
       },
-      "n_below_iou_thr": 7,
+      "n_below_iou_thr": 5,
       "iou_pass": true,
       "class_pass": false,
       "pass": false
     },
     "2A202603158|2A202603186": {
       "n_images": 13,
-      "n_matched_pairs": 65,
-      "n_unmatched_a": 48,
-      "n_unmatched_b": 15,
+      "n_matched_pairs": 71,
+      "n_unmatched_a": 18,
+      "n_unmatched_b": 9,
       "n_skipped_in_ignore": 0,
-      "mean_iou": 0.8993075673248718,
-      "class_agreement": 0.9384615384615385,
+      "mean_iou": 0.9030077051185852,
+      "class_agreement": 0.9859154929577465,
       "attr_agreement": {
-        "occluded_level": 1.0,
-        "truncated": 0.8307692307692308
+        "occluded_level": 0.9295774647887324,
+        "truncated": 0.8732394366197183
       },
-      "n_below_iou_thr": 14,
+      "n_below_iou_thr": 15,
       "iou_pass": true,
-      "class_pass": false,
-      "pass": false
+      "class_pass": true,
+      "pass": true
     },
     "2A202603158|2A202603255": {
       "n_images": 11,
-      "n_matched_pairs": 59,
-      "n_unmatched_a": 17,
-      "n_unmatched_b": 27,
+      "n_matched_pairs": 46,
+      "n_unmatched_a": 28,
+      "n_unmatched_b": 12,
       "n_skipped_in_ignore": 0,
-      "mean_iou": 0.8699287542153552,
-      "class_agreement": 0.847457627118644,
+      "mean_iou": 0.8765266971977724,
+      "class_agreement": 0.8913043478260869,
       "attr_agreement": {
-        "occluded_level": 0.864406779661017,
-        "truncated": 0.9152542372881356
+        "occluded_level": 0.9347826086956522,
+        "truncated": 0.9565217391304348
       },
-      "n_below_iou_thr": 18,
+      "n_below_iou_thr": 13,
       "iou_pass": true,
       "class_pass": false,
       "pass": false
     },
     "2A202603158|2A202603327": {
       "n_images": 11,
-      "n_matched_pairs": 37,
-      "n_unmatched_a": 12,
-      "n_unmatched_b": 8,
-      "n_skipped_in_ignore": 16,
-      "mean_iou": 0.8729211955594202,
-      "class_agreement": 0.8378378378378378,
+      "n_matched_pairs": 32,
+      "n_unmatched_a": 20,
+      "n_unmatched_b": 2,
+      "n_skipped_in_ignore": 6,
+      "mean_iou": 0.893430053867986,
+      "class_agreement": 1.0,
       "attr_agreement": {
-        "occluded_level": 0.5675675675675675,
-        "truncated": 0.8108108108108109
+        "occluded_level": 0.71875,
+        "truncated": 0.875
       },
-      "n_below_iou_thr": 9,
+      "n_below_iou_thr": 6,
       "iou_pass": true,
-      "class_pass": false,
-      "pass": false
+      "class_pass": true,
+      "pass": true
     },
     "2A202603186|2A202603255": {
       "n_images": 11,
-      "n_matched_pairs": 39,
-      "n_unmatched_a": 14,
-      "n_unmatched_b": 22,
-      "n_skipped_in_ignore": 23,
-      "mean_iou": 0.8168760340296968,
-      "class_agreement": 0.9230769230769231,
+      "n_matched_pairs": 33,
+      "n_unmatched_a": 20,
+      "n_unmatched_b": 8,
+      "n_skipped_in_ignore": 20,
+      "mean_iou": 0.8244966160750689,
+      "class_agreement": 0.9090909090909091,
       "attr_agreement": {
-        "occluded_level": 0.8205128205128205,
-        "truncated": 0.7692307692307693
+        "occluded_level": 0.9393939393939394,
+        "truncated": 0.7272727272727273
       },
-      "n_below_iou_thr": 19,
+      "n_below_iou_thr": 13,
       "iou_pass": false,
       "class_pass": false,
       "pass": false
     },
     "2A202603186|2A202603327": {
       "n_images": 12,
-      "n_matched_pairs": 47,
-      "n_unmatched_a": 5,
-      "n_unmatched_b": 15,
-      "n_skipped_in_ignore": 10,
-      "mean_iou": 0.8693989944901914,
-      "class_agreement": 0.9787234042553191,
+      "n_matched_pairs": 43,
+      "n_unmatched_a": 11,
+      "n_unmatched_b": 12,
+      "n_skipped_in_ignore": 8,
+      "mean_iou": 0.8845398870623283,
+      "class_agreement": 0.9767441860465116,
       "attr_agreement": {
-        "occluded_level": 0.40425531914893614,
-        "truncated": 0.8085106382978723
+        "occluded_level": 0.4418604651162791,
+        "truncated": 0.8372093023255814
       },
-      "n_below_iou_thr": 10,
+      "n_below_iou_thr": 7,
       "iou_pass": true,
       "class_pass": true,
       "pass": true
     },
     "2A202603255|2A202603327": {
       "n_images": 14,
-      "n_matched_pairs": 55,
-      "n_unmatched_a": 4,
-      "n_unmatched_b": 23,
-      "n_skipped_in_ignore": 44,
-      "mean_iou": 0.8800367165502125,
-      "class_agreement": 0.8545454545454545,
+      "n_matched_pairs": 57,
+      "n_unmatched_a": 3,
+      "n_unmatched_b": 15,
+      "n_skipped_in_ignore": 4,
+      "mean_iou": 0.8957682250041273,
+      "class_agreement": 0.8947368421052632,
       "attr_agreement": {
-        "occluded_level": 0.6,
-        "truncated": 0.8727272727272727
+        "occluded_level": 0.6140350877192983,
+        "truncated": 0.8771929824561403
       },
-      "n_below_iou_thr": 11,
+      "n_below_iou_thr": 9,
       "iou_pass": true,
       "class_pass": false,
       "pass": false
     }
   },
-  "n_issues": 942,
+  "n_issues": 778,
   "issues_by_type": {
-    "bo_sot_thua": 442,
-    "iou_thap": 138,
-    "sai_thuoc_tinh": 209,
-    "co_can_review": 100,
-    "sai_lop": 53
+    "bo_sot_thua": 364,
+    "iou_thap": 113,
+    "sai_thuoc_tinh": 183,
+    "co_can_review": 94,
+    "sai_lop": 24
   },
-  "n_flagged_images": 38
+  "n_flagged_images": 37
 }
