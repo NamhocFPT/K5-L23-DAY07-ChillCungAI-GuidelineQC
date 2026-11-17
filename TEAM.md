@@ -8,7 +8,7 @@
 | STT | MSHV | Họ và tên | Lớp (L2 / L3 / khác) | Tài khoản GitHub |
 |---|---|---|---|---|
 | 1 | 2A202603186 | Nguyễn Hoài Nam | L2 | (chưa bổ sung) |
-| 2 | 2A202603116 | Nguyễn Quang Thực | L2 | (chưa bổ sung) |
+| 2 | 2A202603116 | Nguyễn Quang Thức | L2 | (chưa bổ sung) |
 | 3 | 2A202603327 | Đinh Đức Hiếu | L2 | (chưa bổ sung) |
 | 4 | 2A202603158 | Nguyễn Quốc Thắng | L2 | (chưa bổ sung) |
 | 5 | 2A202603255 | Doãn Thị Phương Thảo | L2 | (chưa bổ sung) |
