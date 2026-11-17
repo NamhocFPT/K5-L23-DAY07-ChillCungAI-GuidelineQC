@@ -1,0 +1,30 @@
+{
+  "version": "v2.0",
+  "ignore_class": "ignore_region",
+  "classes": [
+    {"name": "car", "definition": "Ô tô con, SUV, taxi."},
+    {"name": "truck", "definition": "Xe tải, pickup hoặc xe có thùng hàng riêng."},
+    {"name": "van", "definition": "Xe thùng kín cỡ nhỏ, thân liền."},
+    {"name": "bus", "definition": "Xe chở khách dạng buýt hoặc minibus."},
+    {"name": "motorcycle", "definition": "Xe hai bánh có động cơ."},
+    {"name": "bicycle", "definition": "Xe hai bánh không có động cơ."},
+    {"name": "tuktuk", "definition": "Xe ba bánh khung liền chở người hoặc hàng."},
+    {"name": "person", "definition": "Người thật đang đi bộ hoặc đứng trên đường."},
+    {"name": "ignore_region", "definition": "Vùng có nhiều vật thật nhưng không thể tách riêng."}
+  ],
+  "attributes": [
+    {"name": "occluded_level", "type": "select", "values": ["0", "1", "2", "3"], "default": "0"},
+    {"name": "truncated", "type": "select", "values": ["no", "yes"], "default": "no"},
+    {"name": "can_review", "type": "checkbox", "values": ["false", "true"], "default": "false"}
+  ],
+  "rules": {
+    "min_box_height_px": 20,
+    "iou_thr_large": 0.85,
+    "iou_thr_small": 0.7,
+    "large_px": 50,
+    "iaa_iou": 0.85,
+    "iaa_class": 0.95,
+    "error_rate_img_max": 0.02,
+    "match_iou": 0.5
+  }
+}
