@@ -29,5 +29,5 @@ Danh sách trên phải khớp dòng tiêu đề của `README.md` (đã đổi 
 - Số thành viên / số lần gán mỗi ảnh (K): 5 / 3
 - IAA trước calibration: IoU trung bình **0.872**, đồng thuận lớp **95.1%** (mẫu số: **488 cặp box ghép được**; ngưỡng lần lượt 0.85 và 95%). Đây là số sau khi một số thành viên sửa nhãn Pha 3 theo guideline v2.0; lần gán độc lập đầu tiên là IoU 0.863, cùng lớp 88.8% (474 cặp), chưa đạt.
 - Số ảnh phải calibration: **37 / 40**.
-- Tỉ lệ lỗi sau calibration: **chưa thực hiện** theo ảnh và theo đối tượng (chưa có mẫu QC sau calibration).
-- **Quyết định:** **Chưa chốt** — IAA hiện đạt ngưỡng (0.872 / 95.1%) nhưng chưa có QC mẫu sau calibration; chọn Release / Hold / Rework theo kết quả `qc_report.py` ở Pha 6.
+- Tỉ lệ lỗi sau calibration: **0/322 đối tượng = 0.0%; 0/40 ảnh = 0.0%**, theo biên bản rà soát Canva của cả nhóm.
+- **Quyết định:** **Release** — IAA đạt ngưỡng (0.872 / 95.1%) và QC mẫu toàn bộ 40 ảnh không ghi nhận lỗi còn lại.
